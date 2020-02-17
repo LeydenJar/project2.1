@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flack</title>
+    <link rel="stylesheet" href="static/common.css">
+    <link rel="stylesheet" href="static/chat.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="static/chatbot.js"></script>
+</head>
+<body>
+    <button class='fluffy-button top-button' id='chat'>Talk to people</button>
+    <div id="wrapper" class="center">
+        <div id="chat">
+            <div id="display"></div>
+            <div id="sendingwrap">
+                <input type='text' name="message" id="message" class="fluffy-input"/>
+                <button class="fluffy-button" id='send'>Send</button>
+            </div>
+        </div>
+    <div>
+</body>
+</html>

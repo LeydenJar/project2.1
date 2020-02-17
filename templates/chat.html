@@ -19,11 +19,21 @@
 </head>
 <body>
     <h3 id="name" > Hi {{name}} !! </h3>
+    <button class='fluffy-button top-button' id='change_username'>Change Username</button>
+    <button class='fluffy-button top-button' id='chatbot'>Talk to the Chatbot</button>
+
+    <!--
+        change username
+    -->
+    <div class='invisible' id='change_username_screen'>
+        <input type = "text" id='newname'/><button id='change'>Change</button>
+    </div>
+
     <div id="wrapper" class="center">
         <div id="rooms">
             <div id="choices">
                 {% for i in rooms %}
-                    <buton class="room-button fluffy-button">{{i}}</buton>
+                    <button class="room-button fluffy-button">{{i}}</button>
                 {% endfor %}
             </div>
             <div id="creation">

@@ -5,6 +5,10 @@
     justify-content: space-evenly;
 }
 
+.invisible{
+    display: none;
+}
+
 .room-button{
     height:40px;
     max-width:100%;
