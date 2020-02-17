@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flack</title>
+    <link rel="stylesheet" href="static/common.css">
+    <link rel="stylesheet" href="static/login.css">
+    <script src="static/login.js"></script>
+</head>
+<body>
+
+    <div id='in' class="center">
+
+        <h3 id="logo">
+            Flack
+        </h3>
+    
+        <form id= "form" action='{{url_for("chat")}}' method='post'>
+          <input id="input" type = 'text' placeholder = 'Seu Nome' name='user'></input>
+          
+          <br/>
+
+          <button id='button' type='submit'>Enter</button>
+        </form>
+    </div>
+</body>
+</html>

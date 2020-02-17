@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    overflow-x: hidden;
+    height:100%;
+}
+
+body{
+    background: linear-gradient(to bottom left, rgb(153, 15, 15), rgb(150, 22, 22));
+    color:whitesmoke;
+}
+
+.center{
+    position:relative;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+    text-align:center;
+
+}
+
+.centery{
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.centerx{
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#in{
+    padding: 10px 0px;
+}
+
+#in * {
+    padding:5px 0px;
+    margin:5px 0px;
+}
+
+div{
+    border-radius: 1%;
+}

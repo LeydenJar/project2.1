@@ -1,0 +1,98 @@
+#wrapper{
+    width:100%;
+    height:90%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.room-button{
+    height:40px;
+    max-width:100%;
+    min-width:25%;
+    padding:3px;
+}
+.room-button:hover{
+    cursor: pointer;
+}
+
+.fluffy-input{
+    border: none;
+    border-radius:5px;
+}
+
+.fluffy-button{
+    border: none;
+    border-radius:5px;
+    background: linear-gradient(to top right, rgba(95, 20, 146, 0.59), rgb(68, 20, 101));
+    color:white;
+}
+
+#name{
+    text-align: center;
+    padding:20px;
+    font-size:20pt;
+}
+
+#rooms{
+    position:relative;
+    height:90%;
+    width:30%;
+    background-color: #D95B5B;
+}
+#rooms > #choices{
+    height:80%;
+    padding:10px;
+}
+
+#rooms > #creation{
+    height:20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px;
+}
+
+#rooms > #creation button, #rooms > #creation input{
+    height:50%;
+}
+#rooms > #creation button{
+    width:25%;
+}
+#rooms > #creation input{
+    width:70%;
+}
+
+#chat{
+    width:60%;
+    height:90%;
+    text-align:center;
+    background-color: #D95B5B;
+}
+
+#chat > *{
+    margin:10px;
+}
+
+#chat > #display{
+    height:80%;
+}
+#sendingwrap{
+    height:10%;
+    padding:10px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#send{
+    width:15%;
+    height:100%;
+
+}
+
+#message{
+    height:100%;
+    width:80%;
+    border: none;
+    border-radius:5px;
+}
