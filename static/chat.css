@@ -40,11 +40,13 @@
     position:relative;
     height:90%;
     width:30%;
-    background-color: #D95B5B;
+    background-image: linear-gradient(#e0e0e0, #e0e0e0), url(/static/background.jpg);
+    background-size: cover;
+    background-blend-mode: exclusion;
     padding: 5px;
 }
 #rooms > #choices{
-    height:80%;
+    height:70%;
     padding:10px;
     overflow-y: auto;
 }
@@ -71,12 +73,15 @@
     width:60%;
     height:90%;
     text-align:center;
-    background-color: #D95B5B;
+    background-image: linear-gradient(#e0e0e0, #e0e0e0), url(/static/background.jpg);
+    background-size: cover;
+    background-blend-mode: exclusion;
     padding: 5px;
 }
 
 #chat > *{
     margin:10px;
+    
 }
 
 #chat > #display{

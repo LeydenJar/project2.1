@@ -3,7 +3,7 @@ var socket = io();
 
 
 document.addEventListener('DOMContentLoaded', function(e){
-
+    
     
 
     socket.on('connect', ()=>{
@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function(e){
         const message_input = document.getElementById('message');
         const chat_to_people = document.getElementById('chat_button');
         const display = document.getElementById('display');
+
+        function scrolldown(){
+            display.scrollTop = display.scrollHeight;
+        }
 
         message_button.onclick = (e)=>{
             let message = message_input.value;
@@ -21,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             display.appendChild(div);
             socket.emit('message_to_chatbot', {'message' : message});
             message_input.value = '';
+            scrolldown();
         }
 
         chat_to_people.onclick = ()=>{
@@ -33,7 +38,9 @@ document.addEventListener('DOMContentLoaded', function(e){
             let content = document.createElement('p');
             content.innerHTML = response;
             div.appendChild(content);
+            div.classList.add('message');
             display.appendChild(div);
+            scrolldown();
         })
 
     })

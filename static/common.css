@@ -54,6 +54,14 @@ div{
 .fluffy-button{
     border: none;
     border-radius:5px;
-    background: linear-gradient(to top right, rgba(95, 20, 146, 0.59), rgb(68, 20, 101));
+    background: linear-gradient(to top right, rgba(113, 70, 141, 0.59), rgb(73, 35, 99));
     color:white;
+}
+
+.message{
+    padding:10px;
+    background: antiquewhite;
+    color:black;
+    margin:10px;
+    width:fit-content;
 }

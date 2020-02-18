@@ -52,7 +52,7 @@ def broadcast_message(data):
     room = data['room']
     timestamp = time.strftime("%H:%M")
     if len(rooms_messages[room]) == 100:
-        rom_messages[room].pop(0)
+        rooms_messages[room].pop(0)
     rooms_messages[room].append({'user' : user, 'message' : message, 'timestamp' : timestamp})
     
 

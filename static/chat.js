@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function(e){
         const change_button = document.getElementById('change');
         const newname = document.getElementById('newname');
         
+        function scrolldown(div){
+            div.scrollTop = div.scrollHeight;
+        }
 
 
         //Going to chatbot page
@@ -93,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             button.innerHTML = name;
             room_selection.appendChild(button);
             getRooms();
+            scrolldown(room_selection);
 
         })
 
@@ -115,7 +119,9 @@ document.addEventListener('DOMContentLoaded', function(e){
             content.innerHTML = '<b>' + user + '</b>' + ' - ' + message;
             div.appendChild(content);
             div.appendChild(timestamp);
+            div.classList.add('message');
             message_display.appendChild(div);
+            scrolldown(message_display);
 
         })
 
@@ -141,11 +147,14 @@ document.addEventListener('DOMContentLoaded', function(e){
                     timestamp.innerHTML = data.messages[i].timestamp;
                     timestamp.classList.add('timestamp');
                     content.innerHTML = '<b>' + user + '</b>' + ' - ' + message;
+                    div.classList.add('message');
                     div.appendChild(content);
                     div.appendChild(timestamp);
                     message_display.appendChild(div);
+                    
                 }
             }
+            message_display.scrollTop = message_display.scrollHeight;
             
         })
 
