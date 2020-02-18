@@ -45,3 +45,15 @@ body{
 div{
     border-radius: 1%;
 }
+
+.fluffy-input{
+    border: none;
+    border-radius:5px;
+}
+
+.fluffy-button{
+    border: none;
+    border-radius:5px;
+    background: linear-gradient(to top right, rgba(95, 20, 146, 0.59), rgb(68, 20, 101));
+    color:white;
+}

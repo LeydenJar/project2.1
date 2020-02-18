@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, join_room, leave_room
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
+chatter = ChatBot('chatty')
+trainer = ChatterBotCorpusTrainer(chatter)
+
+trainer.train(
+    "chatterbot.corpus.english"
+)
 
 rooms = []
 #users = []
@@ -21,7 +29,7 @@ def chat():
     #users.append(name)
     return render_template('chat.html', name=name, rooms=rooms)
 
-@approute('/chatbot')
+@app.route('/chatbot')
 def chatbot():
     return render_template('chatbot.html')
 
@@ -62,6 +70,18 @@ def join(data):
     print('emmiting new_current_room event')
     print({'name' : room, 'messages' : messages})
     socketio.emit('new_current_room', {'name' : room, 'messages' : messages})
+
+
+@socketio.on('message_to_chatbot')
+def message_chatbot(data):
+    message = data['message']
+    response = chatter.get_response(message)
+    print(response)
+    socketio.emit('chatbot_response', {'response' : response.text})
+
+
+
+
 
 if __name__ == '__main__':
     socketio.run(app)
