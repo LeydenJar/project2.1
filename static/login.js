@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     console.log(localStorage.getItem("user"));
 
     if (localStorage.getItem("user")){
-        if (localStorage.getItem("user") !== 'null'){
+        if (localStorage.getItem("user") !== 'null' && localStorage.getItem('user') !== 'undefined'){
             input.value = localStorage.getItem("user");
             button.click();
 

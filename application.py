@@ -15,7 +15,6 @@ trainer.train(
 )
 
 rooms = []
-#users = []
 user_rooms = {}
 rooms_messages = {}
 
@@ -26,7 +25,6 @@ def login():
 @app.route('/chat', methods=['POST'])
 def chat():
     name = request.form.get('user')
-    #users.append(name)
     return render_template('chat.html', name=name, rooms=rooms)
 
 @app.route('/chatbot')
@@ -78,9 +76,6 @@ def message_chatbot(data):
     response = chatter.get_response(message)
     print(response)
     socketio.emit('chatbot_response', {'response' : response.text})
-
-
-
 
 
 if __name__ == '__main__':

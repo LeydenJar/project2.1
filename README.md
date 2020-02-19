@@ -12,7 +12,6 @@ Also relied more on the client-side to retain information about the channel he's
 
 While checking out my project, you may wanna talk to the chatbot...
 
-
 obs: Currently the flask-socketio library has a bug that doesn't allow the server to run properly when using 'flask run' command. So you may have to use 'python application.py' for the project to run smoothly.
 
 In this project I've used the chatterbot(and chatterbot -corpus) libraries, wich are great for creating simple chatbots. They're open source =)
