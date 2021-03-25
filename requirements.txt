@@ -23,7 +23,7 @@ python-dateutil==2.7.5
 python-engineio==3.11.2
 python-socketio==4.4.0
 pytz==2019.3
-PyYAML==3.13
+PyYAML==5.4
 requests==2.22.0
 six==1.14.0
 spacy==2.1.9
